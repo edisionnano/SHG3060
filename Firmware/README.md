@@ -1,5 +1,5 @@
 # Firmware Analysis
-This section will focus on decrypting OTA firmware packages and emulating them through QEMU. A big selection of those files can be found [here](github.com/k-marios/Gr_ISP_Router_Firmware/tree/main/Vodafone/Retail/Sercomm/Power_Station_WiFi6). `XS6_4200_12_all.img` is the latest version at the moment of writing this doc and the one used throughout it.
+This section will focus on decrypting OTA firmware packages and emulating them through QEMU. A big selection of those files can be found [here](https://github.com/k-marios/Gr_ISP_Router_Firmware/tree/main/Vodafone/Retail/Sercomm/Power_Station_WiFi6). `XS6_4200_12_all.img` is the latest version at the moment of writing this doc and the one used throughout it.
 
 ## Decrypting an OTA .img file
 Firmware decryption (and encryption) is handled by `/lib/libfwutil.so` and more specifically its `decrypt_fw` function, here's what it does:
