@@ -11,3 +11,9 @@ Security analysis of the Sercomm SHG3060 router also known as the Greek Vodafone
 ➣ [Firmware Analysis](Firmware) - Decrypting OTA firmware and emulating it with QEMU
 
 ➣ [Misc Stuff](Misc) - Other findings that haven't been put to use yet
+
+
+## Other Routers
+Other Sercomm routers provided by Greek ISPs. Briefly covered in case similarities are found.
+<br>
+<br>➣ [Speedport W 724V Type Ci](Other_Routers/W724V) - Probably the first Sercomm router provided by a Greek ISP. This one is from 2013 and was provided by OTE (now Cosmote Telekom)
