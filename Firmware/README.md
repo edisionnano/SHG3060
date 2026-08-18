@@ -34,6 +34,8 @@ unsquashfs voda.sqsh
 ## A note on compatibility
 The OTA decryption script also works for files destined for the German EasyBox 805 / SER805. Even though this model looks exactly the same as the H300S, the script does not work for OTA images destined for the H300S.
 <br>Version 3.8.02.08 can be found [here](https://www.vodafone.de/media/downloads/files/SER805_SERCOMM_DE_3802_08.zip) and version 4.1.00.05 can be found [here](https://www.vodafone.de/media/downloads/files/SER805_SERCOMM_DE_4100_05_all.zip)
+<br>The `etc/default.xml` configuration of the EasyBox and the Three 4g+ Hub (Sercomm LTE2122GR) can be decrypted using the same script as for the SHG3060.
+<br>`/etc/usbScan.sh` also exists in that router an expects a file named `VD4222B_SERCOMM*.img`.
 
 ## Emulating using QEMU
 On Arch Linux I had to get `qemu-user-static` and `qemu-user-static-binfmt`, depending on the distro package names may vary. Then I copied `$(which qemu-arm-static)` to the root of the root filesystem. Once you do all that you can start the emulator using
