@@ -48,3 +48,9 @@ etc/rcS
 ```
 to begin the initialization process which will take a few minutes to return to `#`
 <br>Once it finishes the web server will be accessible at https://[::1]/ but it will throw you to remote login which is broken. I haven't fixed that yet.
+
+## Extracting NAND romdumps
+I was able to find a dump for the SHG3000 [here](https://www.mediafire.com/file/3y2pejux9ry44kn/vox+3.0+by+jalal+0663016064.7z/file) dumped by a YouTuber named [Jalal](https://www.youtube.com/watch?v=kHinHF8BGNI).
+<br>When I tried to extract it with `binwalk` it failed, thankfully I found [this comment](https://github.com/hack-gpon/hack-gpon.github.io/issues/197#issuecomment-2760381030) by user @hwti which explains that you should skip 64 bytes every 2048 bytes on Broadcom dumps.
+<br>The tool mentioned (`StrayLightning/brcm-nand-bch`) is no longer up so I've created the `strip_oob.py` script to strip these out of band data.
+<br>Once you strip the dump you can use `binwalk` normally to extract all partitions.
