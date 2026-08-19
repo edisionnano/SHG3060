@@ -53,6 +53,7 @@ for i in $(seq 0 32767); do
 done
 ```
 I have not tried this yet.
+<br>Note: On the SHG3000 the filename is `VOX30_SERCOMM*.img`
 
 ## /etc/passwd and /etc/shadow
 `/lib/libhcal.so` creates `/var/cli_pw`, `/var/cli_pw_remote`, `/var/passwd` and `/var/passwd_remote`. `/etc/shadow` and `/etc/passwd` are symlinks to their `/var` counterparts.
