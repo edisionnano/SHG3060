@@ -14,11 +14,11 @@ On boot, `crypt_init_key` of `/lib/libsex_crypt.so` checks if the file exists. I
 In case we are able to retrieve files arbitrarily in the future, this will be very helpful.<br>
 If we run `strings` on `/lib/libsex_crypt.so` we can see some strings that look like keys and if we trace their crossreferences they will point to `crypt_get_public_key`.<br>
 Here is what it does:
-1. It starts by checking our model, if it's the `Vodafone-H-500-s` it returns `9382D105FCB222798AD2B7F059A1476D` else if it's the `VD5244BV2` it returns `A356C31E0F4704DB0BE6FA354BB06970` and the IV is `4B73AC6597137894`
+1. It starts by checking our model, if it's the `Vodafone-H-500-s` it returns `9382D105FCB222798AD2B7F059A1476D` with IV `12315ED72BBBCBDA` else if it's the `VD5244BV2` it returns `A356C31E0F4704DB0BE6FA354BB06970` and the IV is `4B73AC6597137894`
 2. These strings are scrambled, to descramble them it calls a helper function that breaks them into 4 byte chunks
 3. The chunks in even positions (0,2,4,etc.) stay as is
 4. The odd positions (1,3,5,etc.) are placed in the opposite order. The new position is determined by doing chunk count minus current position. So if we have an array with 8 chunks, the second chunk (position 1) goes to position 8-1=7
-5. `VD5244BV2` key becomes `A35669700F47FA350BE604DB4BB0C31E`, `Vodafone-H-500-s` key becomes `9382476DFCB2B7F08AD2227959A1D105` and the IV becomes `4B73AC6597137894`
+5. `VD5244BV2` key becomes `A35669700F47FA350BE604DB4BB0C31E` with IV `4B7378949713AC65`, `Vodafone-H-500-s` key becomes `9382476DFCB2B7F08AD2227959A1D105` with IV `1231CBDA2BBB5ED7`
 
 Once you have the `.p` file you can run the script with the path as the sole argument to decrypt and verify it. The output will look like this
 ```
