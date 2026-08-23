@@ -3,6 +3,7 @@ Probably the first Sercomm router provided by a Greek ISP. This one is from 2013
 
 ## Firmware Analysis
 Firmware can be found [here](https://github.com/k-marios/Gr_ISP_Router_Firmware/tree/main/Cosmote/Sercomm/Speedport_W_724V_Type_Ci). It can be decrypted using [this](https://github.com/Psychotropos/sercomm_fwutils) or [this](https://github.com/jte/sercomm_fwutils_new) and then the regular `binwalk` commands.
+<br>Vodafone Spain's H500s firmware images can be decrypted the same way.
 
 ## /etc/default.xml
 Just like other routers this one has a default configuration file that is used to restore the device to factory defaults. In fact this one has another one too, `/etc/default_098.xml`.
