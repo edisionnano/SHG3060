@@ -19,3 +19,5 @@ Other Sercomm routers provided by Greek ISPs. Briefly covered in case similariti
 ➣ [Speedport W 724V Type Ci](Other_Routers/W724V) - Probably the first Sercomm router provided by a Greek ISP. This one is from 2013 and was provided by OTE (now Cosmote Telekom)
 
 ➣ [Three 4g+ Hub ( Sercomm LTE2122GR )](Other_Routers/LTE2122GR) - 4G+ router by UK ISP Three, software is actully made by Vodafone and is pretty close to the SHG3060. The hardware is closer to the H300S
+
+➣ [Speedport Plus 2](Other_Routers/VD4224BDT) - Very popular router provided by Cosmote Telekom, also known as VD4224BDT and the black one.
