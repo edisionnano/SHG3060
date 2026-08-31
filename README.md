@@ -20,4 +20,6 @@ Other Sercomm routers provided by Greek ISPs. Briefly covered in case similariti
 
 ➣ [Three 4g+ Hub ( Sercomm LTE2122GR )](Other_Routers/LTE2122GR) - 4G+ router by UK ISP Three, software is actully made by Vodafone and is pretty close to the SHG3060. The hardware is closer to the H300S
 
-➣ [Speedport Plus 2](Other_Routers/VD4224BDT) - Very popular router provided by Cosmote Telekom, also known as VD4224BDT and the black one.
+➣ [Speedport Plus 2](Other_Routers/VD4224BDT) - Very popular router provided by Cosmote Telekom, also known as VD4224BDT and the black one
+
+➣ [H300S & Plus](Other_Routers/h300s_plus)- The Vodafone H300s and Speedport Plus are two very popular routers in the Greek market with a lot of similarities under the hood
