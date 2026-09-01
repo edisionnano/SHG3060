@@ -22,4 +22,4 @@ Other Sercomm routers provided by Greek ISPs. Briefly covered in case similariti
 
 ➣ [Speedport Plus 2](Other_Routers/VD4224BDT) - Very popular router provided by Cosmote Telekom, also known as VD4224BDT and the black one
 
-➣ [H300S & Plus](Other_Routers/h300s_plus)- The Vodafone H300s and Speedport Plus are two very popular routers in the Greek market with a lot of similarities under the hood
+➣ [H300S & Plus](Other_Routers/h300s_plus) - The Vodafone H300s and Speedport Plus are two very popular routers in the Greek market with a lot of similarities under the hood
