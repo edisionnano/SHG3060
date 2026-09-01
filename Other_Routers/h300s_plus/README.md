@@ -11,3 +11,26 @@ Encryption the default.xml files is similar to the firmware encryption, especial
 <br>You can use the `decrypt_default_xml.py` script to decrypt these files, as long as the `fw_version` file is on the same directory as the script.
 <br>By decrypting `default_GR.xml` we could determine that the `superuser` password is `h27oo$_$UP%_vf22` for the Greek H300s variant, the Turkish passwords were already known.
 <br>The Speedport uses a different format parsed by `libcalv2.so`. By reading the default config file we can tell that the priviliged user is `superadmin` with password `p#as3w8rd`. The user, however, seems to be disabled even after a reset.
+
+## Decrypting the Configuration Backup
+Both routers encrypt their configs the same way, the only differentiating factor is the `/etc/productclass` file it reads; on the H300s it is empty while on the Speedport Plus it is `W724VCi` which is the previous Speedport model. On the H300s the config is encrypted once more with the password the user provided.
+<br>You can use the `cfg_tool.py` script to decode and reencode the config. Speedport Plus does not need a password to be provided.
+<br>Once decoded the VOIP passwords become accessible.
+
+## Enabling Telnet on the Plus
+We can manipulate the config to enable Telnet on the Speedport Plus. After
+```xml
+<OBJECT name="Device." type="object" writable="0" >
+```
+After that, simply append
+```xml
+<OBJECT name="X_SC_Management." type="object" writable="0" >
+<OBJECT name="TelnetServer." type="object" writable="0" hidden="3" >
+<PARAMETER name="Enable" type="boolean" value="1" writable="1" />
+<PARAMETER name="Port" type="unsignedInt[0:65535]" value="23" writable="1" />
+</OBJECT>
+</OBJECT>
+```
+Reencrypt and restore the file and telnet should be enabled.
+<br>Looking at the `sc_cli` and `login` binaries, the only account that works on lan is `superadmin` but it doesn't seem to be enabled. `root` and `tech*` accounts seem to only be accessible from the WAN.
+<br>The only path going forward is a modded firmware.
