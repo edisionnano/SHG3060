@@ -9,7 +9,7 @@ As always, we can find OTA firmware update images on the [Gr_ISP_Router_Firmware
 ## Decrypting the Default XML
 Encryption the default.xml files is similar to the firmware encryption, especially to type 2 from `sercomm_fwutils` with another hardcoded salt (`48b526aa1f0552bf3e67f94a9afd3b45`) instead of `key_factor`. The only variable is the firmware version, the router reads `/usr/etc/fw_version` to get it. On the H300s the file reads `1.2.02.08` on the latest firmware, while on the Speedport Plus the latest firmware has `09022001.00.040_OTE4`.
 <br>You can use the `decrypt_default_xml.py` script to decrypt these files, as long as the `fw_version` file is on the same directory as the script.
-<br>By decrypting `default_GR.xml` we could determine that the `superuser` password is `h27oo$_$UP%_vf22` for the Greek H300s variant, the Turkish passwords were already known.
+<br>By decrypting `default_GR.xml` we could determine that the `superuser` password is `h27oo$_$UP%_vf22` for the Greek H300s variant (and `swdn4jcp` for the One Net version), the Turkish passwords were already known.
 <br>The Speedport uses a different format parsed by `libcalv2.so`. By reading the default config file we can tell that the priviliged user is `superadmin` with password `p#as3w8rd`. The user, however, seems to be disabled even after a reset.
 
 ## Decrypting the Configuration Backup
