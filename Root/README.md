@@ -66,3 +66,19 @@ The following guide explains in detail how to gain root access on the web interf
 24. Download the latest production firmware from [here](https://github.com/k-marios/Gr_ISP_Router_Firmware/tree/main/Vodafone/Retail/Sercomm/Power_Station_WiFi6), at the time of writing this the latest is `XS6_4200_12_all.img`
 25. As `admin` you can install the firmware update from the web interface
 26. Once the router boots to the latest production version you should still be able to login as `admin`/`admin` on SSH and the web interface
+
+## Shell Access
+SSH drops you to `sc_cli` which is a very constricted shell, instead of busybox's ash. To exit you have to use the `sh` command but that only works if
+```xml
+<PARAMETER name="ShellEnable" type="boolean" value="0" writable="1" encryption="0" />
+```
+is enabled. Sadly we cannot enable through config manipulation so a modded firmware is the only option here.
+<br>There are some other interesting options like
+```xml
+<PARAMETER name="OpenModemEnable" type="boolean" value="0" writable="1" encryption="0" />
+```
+which debrands other vodafone routers and unlocks more WAN port options and
+```xml
+<PARAMETER name="ConsoleEnable" type="boolean" value="0" writable="1" encryption="0" />
+```
+which probably enables UART shell access
