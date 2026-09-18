@@ -12,6 +12,8 @@ Security analysis of the Sercomm SHG3060 router also known as the Greek Vodafone
 
 ➣ [Misc Stuff](Misc) - Other findings that haven't been put to use yet
 
+➣ [Root Access][Root] - Unlocking the `admin` user on the web interface as well as SSH access
+
 
 ## Other Routers
 Other Sercomm routers provided by Greek ISPs. Briefly covered in case similarities are found.
