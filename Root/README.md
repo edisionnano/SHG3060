@@ -72,7 +72,7 @@ SSH drops you to `sc_cli` which is a very constricted shell, instead of busybox'
 ```xml
 <PARAMETER name="ShellEnable" type="boolean" value="0" writable="1" encryption="0" />
 ```
-is enabled. Sadly we cannot enable through config manipulation so a modded firmware is the only option here.
+is enabled. On one SHG3060 V1 running `XS6_4.2.00.09d`, this flag was enabled through the stock SSH CLI, and `sh` then opened a root Linux shell. The result also survived an `apply`/`save` and reboot. See the [verified procedure and its scope](../Practical_Lab/README.md#root-shell-through-the-stock-cli). This has not been tested on other firmware versions or hardware revisions.
 <br>There are some other interesting options like
 ```xml
 <PARAMETER name="OpenModemEnable" type="boolean" value="0" writable="1" encryption="0" />
