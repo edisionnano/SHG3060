@@ -16,7 +16,7 @@ The following guide explains in detail how to gain root access on the web interf
 12. If you alrady know your private key (for example through the configuration bruteforce method) skip to step 15.
 13. Run `ftpput -u myftpuser -p mypassword 192.168.2.x /private_key /mnt/2/.p` to pull the private key file on the root of your FTP directory
 14. Run the [decrypt_p.py](https://github.com/edisionnano/SHG3060/blob/main/Private_Key/Scripts/decrypt_p.py) script to retrieve your private key and IV
-15. Pull the admin configuration to the root of your FTP directory using `ftpput -u myftpuser -p mypassword 192.168.2.x /admin_config /mnt/0/admmin`
+15. Pull the admin configuration to the root of your FTP directory using `ftpput -u myftpuser -p mypassword 192.168.2.x /admin_config /mnt/0/admin`
 16. Decrypt the file using [decrypt_mnt0.py](https://github.com/edisionnano/SHG3060/blob/main/Configs/Scripts/decrypt_mnt0.py), just make sure to edit it to fill in your private key and IV
 17. Edit the file to explicitly enable SSH and change the admin user's password and permissions. Non `d` firmwares disable SSH and newer firmwares may alter the `admin` password which is why we must set the values explicitly instead of relying on the default configuration.
 18. The top of the decrypted file should look like this, green lines are the new code we added (without inclding the plus signs at the start of each line of course)
