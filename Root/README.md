@@ -53,5 +53,8 @@ When reverting to production firmware, the SSH server will get disabled. Export 
 ```
 repack with cfg tool and restore from the web interface as admin. After that you should get SSH back on production firmware and be able to run the `sh` command to gain full shell access.
 
+### Regarding Telnet
+Version 09 is the last with Telnet support, 12 seems to have removed it. You can enable Telnet using `set cwmp node Device.X_VODAFONE_Management.Server.TelnetServer.Enable value 1` but updating to 12 will disable it again.
+
 ### Firmware Update
 You are currently in debug firmware, you can download the latest production firmware from [here](https://github.com/k-marios/Gr_ISP_Router_Firmware/blob/main/Vodafone/Retail/Sercomm/Power_Station_WiFi6/XS6_4200_12_all.img) and install it from the web interface as admin.
