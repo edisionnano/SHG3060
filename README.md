@@ -16,12 +16,4 @@ Security analysis of the Sercomm SHG3060 router also known as the Greek Vodafone
 
 
 ## Other Routers
-Other Sercomm routers provided by Greek ISPs. Briefly covered in case similarities are found.
-
-➣ [Speedport W 724V Type Ci](Other_Routers/W724V) - Probably the first Sercomm router provided by a Greek ISP. This one is from 2013 and was provided by OTE (now Cosmote Telekom)
-
-➣ [Three 4g+ Hub ( Sercomm LTE2122GR )](Other_Routers/LTE2122GR) - 4G+ router by UK ISP Three, software is actully made by Vodafone and is pretty close to the SHG3060. The hardware is closer to the H300S
-
-➣ [Speedport Plus 2](Other_Routers/VD4224BDT) - Very popular router provided by Cosmote Telekom, also known as VD4224BDT and the black one
-
-➣ [H300S & Plus](Other_Routers/h300s_plus) - The Vodafone H300s and Speedport Plus are two very popular routers in the Greek market with a lot of similarities under the hood
+Other Sercomm routers are supported by the [Sercomm Tools](https://github.com/edisionnano/Sercomm_Tools) repo.
